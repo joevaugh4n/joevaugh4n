@@ -1,0 +1,51 @@
+---
+import Header from "../components/header.astro";
+import Nav from "../components/nav.astro";
+interface Props {
+	title: string;
+}
+
+const { title } = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Schibsted+Grotesk:ital,wght@0,400..900;1,400..900&display=swap"
+			rel="stylesheet"
+		/>
+		<meta charset="UTF-8" />
+		<meta name="description" content="Astro description" />
+		<meta name="viewport" content="width=device-width" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="generator" content={Astro.generator} />
+		<title>{title}</title>
+	</head>
+	<body class="container mx-auto my-2 bg-gray-100">
+		<Nav />
+		<section class="my-4 mx-2 mt-2 px-4 py-2 shadow bg-white rounded-sm">
+			<Header />
+			<slot />
+		</section>
+	</body>
+</html>
+<style is:global>
+	@tailwind base;
+	@tailwind components;
+	@tailwind utilities;
+
+	@layer base {
+		[data-icon] {
+			@apply text-2xl text-blue-500;
+		}
+		a {
+			@apply text-blue-500 underline;
+		}
+		p {
+			@apply pb-2 max-w-[60ch];
+		}
+	}
+</style>
