@@ -26,6 +26,8 @@ const { title } = Astro.props;
 	<body>
 		<Header />
 		<slot />
+		<footer class="absolute bottom-0 mb-20">
+			© <span class='font-medium text-balance'>Joe Vaughan</span>, made with Astro and Tailwind CSS</footer>
 	</body>
 </html>
 <style is:global>
