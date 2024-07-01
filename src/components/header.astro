@@ -1,10 +1,28 @@
 ---
 import { Icon } from "astro-icon/components";
+import { Image } from "astro:assets";
+import portrait from "../assets/joe_portrait.webp";
 ---
 
-<header class="mb-4">
-    <h1 class="text-4xl font-semibold mb-2">Joe Vaughan</h1>
-    <div class="text-lg text-balance italic">
-        Helping teams create better content for the Internet
+<header class="grid grid-cols-2 mb-40">
+    <div class="flex items-center gap-2">
+        <Image
+            src={portrait}
+            alt="Joe Vaughan"
+            class="h-12 w-fit rounded-full"
+        />
+        <section class="flex gap-2">
+            <h1 class="text-pretty">
+                <b>Joe Vaughan</b>: Contented content designer
+            </h1>
+        </section>
     </div>
+    <nav class="flex justify-end gap-x-1">
+        <a class="w-fit h-fit" href="https://www.linkedin.com/in/joevaugh4n/"
+            ><Icon name="mdi:linkedin" /></a
+        >
+        <a class="w-fit h-fit" href="https://twitter.com/joevaugh4n"
+            ><Icon name="mdi:twitter" /></a
+        >
+    </nav>
 </header>

@@ -1,6 +1,5 @@
 ---
 import Header from "../components/header.astro";
-import Nav from "../components/nav.astro";
 interface Props {
 	title: string;
 }
@@ -14,7 +13,7 @@ const { title } = Astro.props;
 		<link rel="preconnect" href="https://fonts.googleapis.com" />
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 		<link
-			href="https://fonts.googleapis.com/css2?family=Schibsted+Grotesk:ital,wght@0,400..900;1,400..900&display=swap"
+			href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap"
 			rel="stylesheet"
 		/>
 		<meta charset="UTF-8" />
@@ -24,12 +23,9 @@ const { title } = Astro.props;
 		<meta name="generator" content={Astro.generator} />
 		<title>{title}</title>
 	</head>
-	<body class="container mx-auto my-2 bg-gray-100">
-		<Nav />
-		<section class="my-4 mx-2 mt-2 px-8 py-8 shadow bg-white rounded-sm">
-			<Header />
-			<slot />
-		</section>
+	<body>
+		<Header />
+		<slot />
 	</body>
 </html>
 <style is:global>
@@ -40,6 +36,9 @@ const { title } = Astro.props;
 	@layer base {
 		[data-icon] {
 			@apply text-2xl text-blue-500;
+		}
+		body {
+			@apply container mx-auto p-4 bg-zinc-50;
 		}
 		a {
 			@apply text-blue-500 underline;

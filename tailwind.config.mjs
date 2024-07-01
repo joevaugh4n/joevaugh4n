@@ -4,7 +4,7 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        sans: 'Schibsted Grotesk'
+        sans: 'Inter'
       }
     }
   },
