@@ -2,29 +2,34 @@
 import { Icon } from "astro-icon/components";
 import { Image } from "astro:assets";
 import portrait from "../assets/joe_portrait.webp";
+
+interface Props {
+  posts: boolean;
+}
+
+const { posts } = Astro.props;
 ---
 
-<header class="grid grid-cols-2">
-    <div class="flex items-start gap-2">
-        <Image
-            src={portrait}
-            alt="Joe Vaughan"
-            class="h-12 w-12 rounded-full"
-        />
+<header class="grid grid-cols-2 mb-20">
+  <div class="flex items-start gap-2">
+    <Image src={portrait} alt="Joe Vaughan" class="h-12 w-12 rounded-full" />
 
-        <section class="flex gap-2">
-            <h1 class="text-pretty">
-                <div class='font-medium'>Joe Vaughan</div>
-                <div class="leading-5">Contented <span class='inline-block text-nowrap'>content design</span></div>
-            </h1>
-        </section>
-    </div>
-    <nav class="flex justify-end gap-x-1">
-        <a class="w-fit h-fit" href="https://www.linkedin.com/in/joevaugh4n/"
-            ><Icon name="mdi:linkedin" /></a
-        >
-        <a class="w-fit h-fit" href="https://twitter.com/joevaugh4n"
-            ><Icon name="mdi:twitter" /></a
-        >
-    </nav>
+    <section class="flex gap-16">
+      <div class="text-pretty">
+        <h1 class="font-medium"><a class="text-black" href="/">Joe Vaughan</a></h1>
+        <div class="leading-5">
+          Contented <span class="inline-block text-nowrap">content design</span>
+        </div>
+      </div>
+      {posts && <a href="/posts">Posts</a>}
+    </section>
+  </div>
+  <nav class="flex justify-end gap-x-1">
+    <a class="w-fit h-fit" href="https://www.linkedin.com/in/joevaugh4n/"
+      ><Icon name="mdi:linkedin" /></a
+    >
+    <a class="w-fit h-fit" href="https://twitter.com/joevaugh4n"
+      ><Icon name="mdi:twitter" /></a
+    >
+  </nav>
 </header>
