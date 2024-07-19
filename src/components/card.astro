@@ -1,0 +1,14 @@
+---
+interface Props {
+  title: string;
+}
+
+const { title } = Astro.props;
+---
+
+<article class="pr-4 shadow p-4 rounded bg-yellow-200">
+  <!-- Title -->
+  <h2>{title}</h2>
+  <!-- Content. NB: this component is unopinionated about formatting and internal styling -->
+  <slot />
+</article>
