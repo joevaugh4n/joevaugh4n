@@ -1,6 +1,6 @@
 ---
-import { Icon } from "astro-icon/components";
 import { Image } from "astro:assets";
+import Social from "./atoms/social.astro";
 import portrait from "../assets/joe_portrait.webp";
 
 interface Props {
@@ -10,26 +10,27 @@ interface Props {
 const { posts } = Astro.props;
 ---
 
-<header class="grid grid-cols-2 mb-20">
+<header class="flex gap-16 justify-between">
+  <!-- Title -->
   <div class="flex items-start gap-2">
     <Image src={portrait} alt="Joe Vaughan" class="h-12 w-12 rounded-full" />
 
     <section class="flex gap-16">
-      <div class="text-pretty">
-        <h1 class="font-medium"><a class="text-black" href="/">Joe Vaughan</a></h1>
-        <div class="leading-5">
-          Contented <span class="inline-block text-nowrap">content design</span>
-        </div>
+      <div>
+        <h1 class="font-medium">
+          <a class="text-black tracking-tight" href="/">Joe Vaughan</a>
+        </h1>
+        <p>
+          Helping organisations connect to their audiences
+        </p>
       </div>
-      {posts && <a href="/posts">Posts</a>}
     </section>
+    {posts && <a href="/posts">Posts</a>}
   </div>
+
+  <!-- Socials -->
   <nav class="flex justify-end gap-x-1">
-    <a class="w-fit h-fit" href="https://www.linkedin.com/in/joevaugh4n/"
-      ><Icon name="mdi:linkedin" /></a
-    >
-    <a class="w-fit h-fit" href="https://twitter.com/joevaugh4n"
-      ><Icon name="mdi:twitter" /></a
-    >
+    <Social symbol="mdi:linkedin" href="https://www.linkedin.com/in/joevaugh4n/"/>
+    <Social symbol="mdi:twitter" href="https://www.twitter.com/joevaugh4n/"/>
   </nav>
 </header>
