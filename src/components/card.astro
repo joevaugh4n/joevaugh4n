@@ -6,9 +6,9 @@ interface Props {
 const { title } = Astro.props;
 ---
 
-<article class="pr-4 shadow p-4 rounded bg-yellow-200">
+<article class="py-2 px-4 shadow rounded border-yellow-200 border-2 w-fit">
   <!-- Title -->
   <h2>{title}</h2>
-  <!-- Content. NB: this component is unopinionated about formatting and internal styling -->
+  <!-- Content. NB: this component is unopinionated about formatting and styling of its children -->
   <slot />
 </article>
