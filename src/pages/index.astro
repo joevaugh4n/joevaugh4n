@@ -1,35 +1,8 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import Card from "../components/card.astro";
+import Prose from "../components/prose";
 ---
 
 <Layout title="Joe Vaughan">
-  <Card title="About">
-    <p>
-      Since 2016, I've worked in online communications at places like <a
-        href="https://merl.reading.ac.uk">The Museum of English Rural Life</a
-      >, <a href="https://readingmuseum.org.uk">Reading Museum</a>, <a
-        href="https://chromatic.com">Chromatic</a
-      >, and <a href="https://storybook.js.org">Storybook</a>. My work has
-      generated millions of impressions, engaged 100,000s of readers and
-      appeared in international press (<a
-        href="https://www.theguardian.com/books/2019/oct/22/woman-reunited-with-childhood-book-in-museum-reading-the-secret-garden"
-        >The Guardian</a
-      >, <a
-        href="https://www.npr.org/2020/08/09/900498227/the-escapist-land-of-cottagecore-from-marie-antoinette-to-taylor-swift"
-        >NPR</a
-      >, <a
-        href="https://www.polygon.com/2020/3/26/21195434/animal-crossing-new-horizons-merl-rural-life-museum-smocks-design-clothes"
-        >Polygon</a
-      >).
-    </p>
-    <p>
-      Today, I'm open to freelance work and available to discuss full-time posts
-      that might be the right fit. As a writer, editor and content designer, I
-      love helping organisations to do more with words, messaging, content, and
-      audience reach.
-    </p>
-
-    <p><a href="mailto:jbvaughan1993@gmail.com">Reach out via email</a>.</p>
-  </Card>
+  <Prose client:load />
 </Layout>

@@ -4,33 +4,42 @@ import Social from "./atoms/social.astro";
 import portrait from "../assets/joe_portrait.webp";
 
 interface Props {
-  posts: boolean;
+  title?: boolean;
 }
 
-const { posts } = Astro.props;
+const { title = "Joe Vaughan" } = Astro.props;
 ---
 
-<header class="flex gap-16 justify-between text-pretty mb-20">
+<header class="flex gap-16 justify-between text-pretty">
   <!-- Title -->
-  <div class="flex items-start gap-2">
-    <Image src={portrait} alt="Joe Vaughan" class="h-12 w-12 rounded-full" loading="eager" />
+  <div class="flex items-center gap-2">
+    <Image
+      src={portrait}
+      alt="Joe Vaughan"
+      class="h-12 w-12 rounded-full"
+      loading="eager"
+    />
 
     <section class="flex gap-8">
       <div>
-        <h1 class="font-medium">
-          <a class="text-black" href="/">Joe Vaughan</a>
+        <h1>
+          {title}
         </h1>
-        <p>
-          Helping audiences & organisations connect online 
-        </p>
       </div>
     </section>
-    {posts && <a href="/posts">Posts</a>}
   </div>
 
   <!-- Socials -->
   <nav class="flex justify-end gap-x-1">
-    <Social title='LinkedIn' symbol="mdi:linkedin" href="https://www.linkedin.com/in/joevaugh4n/"/>
-    <Social title="Twitter" symbol="mdi:twitter" href="https://www.twitter.com/joevaugh4n/"/>
+    <Social
+      title="LinkedIn"
+      symbol="mdi:linkedin"
+      href="https://www.linkedin.com/in/joevaugh4n/"
+    />
+    <Social
+      title="Twitter"
+      symbol="mdi:twitter"
+      href="https://www.twitter.com/joevaugh4n/"
+    />
   </nav>
 </header>
