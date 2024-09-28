@@ -1,45 +1,17 @@
 ---
 import { Image } from "astro:assets";
-import Social from "./atoms/social.astro";
-import portrait from "../assets/joe_portrait.webp";
-
-interface Props {
-  title?: boolean;
-}
-
-const { title = "Joe Vaughan" } = Astro.props;
+import portrait from "../assets/portrait.webp";
 ---
 
-<header class="flex gap-16 justify-between text-pretty">
+<header class="flex justify-between items-start text-pretty lg:mb-4 mb-8">
   <!-- Title -->
-  <div class="flex items-center gap-2">
+  <div class="flex gap-2">
     <Image
       src={portrait}
       alt="Joe Vaughan"
-      class="h-12 w-12 rounded-full"
+      class="h-24 w-24 rounded-full"
       loading="eager"
+      title="Joe Vaughan"
     />
-
-    <section class="flex gap-8">
-      <div>
-        <h1>
-          {title}
-        </h1>
-      </div>
-    </section>
   </div>
-
-  <!-- Socials -->
-  <nav class="flex justify-end gap-x-1">
-    <Social
-      title="LinkedIn"
-      symbol="mdi:linkedin"
-      href="https://www.linkedin.com/in/joevaugh4n/"
-    />
-    <Social
-      title="Twitter"
-      symbol="mdi:twitter"
-      href="https://www.twitter.com/joevaugh4n/"
-    />
-  </nav>
 </header>

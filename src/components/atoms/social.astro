@@ -1,13 +1,10 @@
 ---
-import { Icon } from "astro-icon/components";
-
 interface Props {
-  symbol: string;
   href: string;
   title: string;
 }
 
-const { symbol, href, title } = Astro.props;
+const { href, title } = Astro.props;
 ---
 
-<a class="w-fit h-fit" href={href}><Icon name={symbol} title={title} /></a>
+<a class="w-fit h-fit font-serif tracking-wide" href={href}>{title}</a>

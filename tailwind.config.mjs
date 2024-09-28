@@ -3,8 +3,11 @@ export default {
   content: ['./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}'],
   theme: {
     extend: {
+      cursor: {
+        'fancy': 'url(/src/assets/pizza.cur), default',
+      },
       fontFamily: {
-        sans: 'Inter'
+        serif: 'Times New Roman'
       }
     }
   },

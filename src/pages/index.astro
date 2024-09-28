@@ -1,8 +1,32 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import Prose from "../components/prose";
+import Image from "astro/components/Image.astro";
+import MooDeng from "../assets/moo_deng.webp";
+import Social from "../components/atoms/social.astro";
 ---
 
 <Layout title="Joe Vaughan">
-  <Prose client:load />
+  <Image
+    src={MooDeng}
+    title="Moo Deng"
+    alt="Moo Deng, the hippo that went viral in 2024. Its jaw is wide open."
+    class="xl:w-2/3 w-full mb-4"
+    loading="eager"
+  />
+  <!-- About Me -->
+  <p>
+    <b>Joe Vaughan</b> is the marketing manager of <a
+      href="https://merl.reading.ac.uk/">The Museum of English Rural Life</a
+    >
+    and <a href="https://collections.reading.ac.uk/"
+      >the University of Reading's Museums & Special Collections</a
+    >. He is passionate about joyful marketing, delightful user experiences,
+    and Moo Deng, 2024's favourite hippo.
+  </p>
+  <!-- Socials -->
+  <nav class="flex justify-start gap-x-2">
+    <Social title="LinkedIn" href="https://www.linkedin.com/in/joevaugh4n/" />
+    <Social title="Twitter" href="https://www.twitter.com/joevaugh4n/" />
+    <Social title="Email" href="mailto:jbvaughan1993@gmail.com"/>
+  </nav>
 </Layout>
