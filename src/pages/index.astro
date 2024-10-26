@@ -1,25 +1,17 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import Image from "astro/components/Image.astro";
-import MooDeng from "../assets/moo_deng.webp";
 import Social from "../components/atoms/social.astro";
 ---
 
 <Layout title="Joe Vaughan">
   <!-- About Me -->
-  <p>
-    <b>Joe Vaughan</b> is the marketing manager of <a
+  <p class="text-2xl leading-normal">
+    <b>Joe Vaughan</b> is the Marketing Manager at <a
       href="https://merl.reading.ac.uk/">The Museum of English Rural Life</a
     >
     and <a href="https://collections.reading.ac.uk/"
       >the University of Reading's Museums & Special Collections</a
-    >. He is passionate about joyful marketing, delightful user experiences,
-    and <a href="/moo_deng">Moo Deng</a>, 2024's favourite hippo.
+    >. He is passionate about joyful marketing, delightful user experiences, and
+    quality service design.
   </p>
-  <!-- Socials -->
-  <nav class="flex justify-start gap-x-2">
-    <Social title="LinkedIn" href="https://www.linkedin.com/in/joevaugh4n/" />
-    <Social title="Twitter" href="https://www.twitter.com/joevaugh4n/" />
-    <Social title="Email" href="mailto:jbvaughan1993@gmail.com"/>
-  </nav>
 </Layout>
