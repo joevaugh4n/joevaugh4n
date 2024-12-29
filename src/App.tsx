@@ -3,7 +3,7 @@ import BlueskyIcon from '/bluesky.svg'
 function Bluesky() {
   return (
     <a className='w-fit block' href="https://bsky.app/profile/joevaughan.net" title='Bluesky'>
-      <img src={BlueskyIcon} className='h-5' alt='Bluesky' />
+      <img src={BlueskyIcon} className='h-8' alt='Bluesky' />
     </a >
   )
 }
@@ -15,7 +15,7 @@ interface ButtonProps {
 function Button({ label }: ButtonProps) {
   return (
     <button onClick={() => alert('Joe Vaughan is a copywriter, social media manager, and museum professional. His work has appeared in international press. He lives in Reading.')}
-      className='bg-slate-100 px-1 py-1 shadow text-sm w-fit h-fit'>
+      className='bg-slate-100 px-1 py-1 shadow text-sm w-fit h-8 hover:bg-gray-950 rounded-sm hover:text-white'>
       {label}
     </button>
   )
@@ -24,9 +24,11 @@ function Button({ label }: ButtonProps) {
 function Title() {
   return (
     <header className='flex justify-between'>
-      <div className='flex md:flex-col gap-x-4 gap-y-2'>
+      <div className='flex flex-col gap-x-4 gap-y-2'>
         <section>
-          <h1 className='text-xl font-bold lowercase'>Joe Vaughan</h1>
+          <a href="/" title='Joe Vaughan'>
+            <h1 className='text-2xl font-bold lowercase'>Joe Vaughan</h1>
+          </a>
           <p>internet person</p>
         </section>
         <Button label='about' />
