@@ -1,5 +1,3 @@
-import kitty from '/kitty.jpg'
-
 interface ButtonProps {
   label: string;
 }
