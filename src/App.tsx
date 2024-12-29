@@ -1,3 +1,13 @@
+import BlueskyIcon from '/bluesky.svg'
+
+function Bluesky() {
+  return (
+    <a className='w-fit block' href="https://bsky.app/profile/joevaughan.net" title='Bluesky'>
+      <img src={BlueskyIcon} className='h-5' alt='Bluesky' />
+    </a >
+  )
+}
+
 interface ButtonProps {
   label: string;
 }
@@ -12,23 +22,27 @@ function Button({ label }: ButtonProps) {
 }
 
 function Title() {
-
   return (
-    <header className='flex md:flex-col gap-x-4 gap-y-2'>
-      <section>
-        <h1 className='text-xl font-bold lowercase'>Joe Vaughan</h1>
-        <p>internet person</p>
-      </section>
-      <Button label='about' />
-    </header>
+    <header className='flex justify-between'>
+      <div className='flex md:flex-col gap-x-4 gap-y-2'>
+        <section>
+          <h1 className='text-xl font-bold lowercase'>Joe Vaughan</h1>
+          <p>internet person</p>
+        </section>
+        <Button label='about' />
+      </div>
+      <div className='md:hidden'>
+        <Bluesky />
+      </div>
+    </header >
   )
 }
-
 interface TimestampProps {
   title: string;
   prose: string;
   dates: string;
 }
+
 function Timestamp({ title, prose, dates }: TimestampProps) {
   return (
     <li className='text-balance'>
@@ -53,9 +67,12 @@ function Timeline() {
 
 export default function App() {
   return (
-    <div className='grid md:grid-cols-[2fr_4fr] gap-8'>
+    <div className='grid md:grid-cols-[2fr_6fr_1fr] gap-8'>
       <Title />
       <Timeline />
+      <div className='md:block hidden'>
+        <Bluesky />
+      </div>
     </div>
   )
 }
