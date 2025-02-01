@@ -1,0 +1,61 @@
+---
+import { getCollection, render } from "astro:content";
+import Layout from "../../layouts/Layout.astro";
+import { sequence } from "astro:middleware";
+// 1. Generate a new path for every collection entry
+export async function getStaticPaths() {
+  const posts = await getCollection("blog");
+  return posts.map((post) => ({
+    params: { id: post.id },
+    props: { post },
+  }));
+}
+// 2. For your template, you can get the entry directly from the prop
+const { post } = Astro.props;
+sequence;
+const { Content } = await render(post);
+---
+
+<Layout title={post.data.title}>
+  <article>
+    <div class="strapline">
+      <div class="date">{post.data.date}</div>
+    </div>
+    <h1>{post.data.title}</h1>
+    <main>
+      <Content />
+    </main>
+    Thanks for reading!
+  </article>
+</Layout>
+
+<style>
+  article {
+    padding-left: 1rem;
+  }
+  h1 {
+    font-size: var(--lg);
+    margin-bottom: var(--lg);
+    text-wrap: pretty;
+    letter-spacing: -0.25px;
+  }
+  main {
+    min-height: 50vh;
+    font-family: var(--serif);
+    padding-bottom: var(--md);
+    margin-bottom: var(--lg);
+    border-bottom: white 1px solid;
+    > p {
+      padding-bottom: var(--sm);
+      font-weight: 500;
+      font-size: var(--sm);
+    }
+  }
+  .date {
+    margin-bottom: var(--xs);
+  }
+  .strapline {
+    display: flex;
+    justify-content: space-between;
+  }
+</style>

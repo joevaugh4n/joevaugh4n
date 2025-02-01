@@ -1,0 +1,19 @@
+---
+interface Props {
+  path: ImageMetadata;
+  url: string;
+  title: string;
+}
+
+const { path, url, title } = Astro.props;
+---
+
+<a href={url} title={title}>
+  <img src={path.src} alt={title} />
+</a>
+
+<style>
+  img {
+    height: var(--md);
+  }
+</style>

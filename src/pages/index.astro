@@ -1,11 +1,64 @@
 ---
-import Welcome from '../components/Welcome.astro';
-import Layout from '../layouts/Layout.astro';
-
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+import { getCollection } from "astro:content";
+const posts = await getCollection("blog");
+import Layout from "../layouts/Layout.astro";
+import kitty from "../assets/kitty.webp";
 ---
 
-<Layout>
-	<Welcome />
+<Layout title="Joe Vaughan">
+  <p>welcome to my new blog! first posts coming soon :) in the meantime please enjoy this beautiful computer</p>
+  <img src={kitty.src} class="kitty" alt="a hello kitty computer" />
+  <ul>
+    {
+      posts.map((post) => (
+        <li class="post" tabindex="0">
+          <a
+            href={`/posts/${post.id}`}
+            title={`${post.data.title}, by Joe Vaughan`}
+          >
+            <p class="date">{post.data.date}</p>
+            <h2>{post.data.title}</h2>
+            <p class="description">{post.data.description}</p>
+          </a>
+        </li>
+      ))
+    }
+  </ul>
 </Layout>
+
+<style>
+  p {
+    padding-bottom: 1rem;
+    line-height: 1.8
+  }
+  .kitty {
+    width: 75vw;
+  }
+  ul {
+    display: flex;
+    list-style: none;
+    flex-direction: column;
+    gap: var(--lg);
+    margin-right: 2rem;
+  }
+  .post {
+    padding: 1rem;
+    border-bottom: solid 1px black;
+  }
+  .post:hover {
+    background-color: rgb(251, 243, 232);
+  }
+  .post h2 {
+    margin-bottom: var(--sm);
+    font-weight: 500;
+    font-size: 2rem;
+    color: var(--pink);
+  }
+  .post .date {
+    color: var(--off-black);
+    margin-bottom: var(--xs);
+  }
+  .post .description {
+    color: var(--off-black);
+  }
+</style>
