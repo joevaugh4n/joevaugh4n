@@ -9,11 +9,10 @@ const pageTitle = title || frontmatter?.title || "Joe Vaughan";
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link
-    href="https://fonts.googleapis.com/css2?family=Inclusive+Sans:ital,wght@0,300..700;1,300..700&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap"
+    href="https://fonts.googleapis.com/css2?family=Gabriela&family=Mulish:ital,wght@0,200..1000;1,200..1000&display=swap"
     rel="stylesheet"
   />
-  <!-- End Google Fonts -->
-  <!-- Google Analytics -->
+  <!-- Google Fonts end -->
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-GB8HF0L0KV"
   ></script>
@@ -25,8 +24,26 @@ const pageTitle = title || frontmatter?.title || "Joe Vaughan";
     gtag("js", new Date());
 
     gtag("config", "G-GB8HF0L0KV");
+
+    console.log(
+      window.location.pathname == "/"
+        ? console.log("Gtag: home")
+        : console.log("Gtag: " + window.location.pathname)
+    );
   </script>
   <!-- Google Analytics end -->
+
+  <!-- Meta tags -->
+  <meta property="og:title" content={title || frontmatter.title} />
+  <meta property="og:site_name" content="Joe Vaughan" />
+  <meta property="og:url" content="https://joevaughan.net" />
+  <meta
+    property="og:description"
+    content="Joe Vaughan is a social media manager, museum professional, and content creator."
+  />
+  <meta property="og:image" content="" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width" />
   <link rel="icon" type="image/svg+xml" href="/favicon.svg" />

@@ -12,6 +12,10 @@ const blog = defineCollection({
       (date) => date.toISOString().split("T")[0] // Converts to 'YYYY-MM-DD'
     ),
     description: z.string(),
+    summary: z.string().optional(),
+    tags: z
+      .array(z.enum(["social media", "blog", "museum", "history"]))
+      .optional(),
   }),
 });
 

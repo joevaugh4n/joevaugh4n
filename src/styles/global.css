@@ -1,0 +1,22 @@
+@import "tailwindcss";
+
+@theme {
+    --font-sans: 'Mulish';
+    --font-serif: 'Gabriela';
+}
+
+main>p {
+    @apply pb-4;
+}
+
+main>p:nth-child(1) {
+    @apply font-bold
+}
+
+main>ul {
+    @apply list-outside list-disc pb-4
+}
+
+p a {
+    @apply text-blue-800 font-semibold hover:underline
+}

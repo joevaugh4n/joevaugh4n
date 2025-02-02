@@ -4,55 +4,24 @@ import linkedin from "../assets/linkedin.svg";
 import Icon from "../atoms/Icon.astro";
 ---
 
-<header>
+<nav class="py-4 flex justify-between md:mb-12 sticky top-0 bg-white">
   <h1>
-    <a class="title" href="/"> joe vaughan</a>
+    <a class="text-lg font-bold hover:opacity-50" href="/">Joe Vaughan</a>
   </h1>
-
-  <nav>
-    <ul class="socials">
-      <li>
-        <Icon
-          path={bluesky}
-          title="Bluesky"
-          url="https://bsky.app/profile/joevaughan.net"
-        />
-      </li>
-      <li>
-        <Icon
-          path={linkedin}
-          title="LinkedIn"
-          url="https://www.linkedin.com/in/joevaugh4n/"
-        />
-      </li>
-    </ul>
-  </nav>
-</header>
-
-<style>
-  header {
-    margin-bottom: 4rem;
-    /** margin-bottom: 8rem; */
-    padding-left: 1rem;
-    padding-bottom: var(--sm);
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-  h1 {
-    display: flex;
-  }
-  h1 > a.title {
-    color: var(--off-black);
-    font-size: var(--sm);
-    font-weight: 800;
-  }
-  nav {
-    align-self: flex-end;
-  }
-  .socials {
-    list-style: none;
-    display: flex;
-    gap: var(--sm);
-  }
-</style>
+  <ul class="flex gap-2">
+    <li>
+      <Icon
+        path={bluesky}
+        title="Bluesky"
+        url="https://bsky.app/profile/joevaughan.net"
+      />
+    </li>
+    <li>
+      <Icon
+        path={linkedin}
+        title="LinkedIn"
+        url="https://www.linkedin.com/in/joevaugh4n/"
+      />
+    </li>
+  </ul>
+</nav>

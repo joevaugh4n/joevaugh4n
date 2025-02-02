@@ -1,60 +1,20 @@
 ---
 import Head from "../components/Head.astro";
 import Header from "../components/Header.astro";
+import "../styles/global.css";
 const { title } = Astro.props;
 ---
 
 <!doctype html>
 <html lang="en">
   <Head title={title} />
-  <body>
-    <Header />
-    <section class="slot">
-      <slot />
+  <body class="antialiased">
+    <section class="px-4 flex gap-y-20 flex-col mx-auto justify-center">
+      <Header />
+      <section class="md:w-4/5 md:mx-auto flex flex-col gap-y-20">
+        <slot />
+      </section>
+      <footer class="self-center mb-8 font-sans text-sm">© Joe Vaughan, 2025</footer>
     </section>
   </body>
 </html>
-
-<style is:global>
-  /** theme */
-  *,
-  html {
-    padding: 0;
-    margin: 0;
-    font-size: 16px;
-    font-weight: 400;
-    line-height: 1;
-  }
-  body {
-    padding: var(--md);
-    background-color: var(--off-white);
-    color: var(--off-black);
-    font-family: var(--sans);
-  }
-  :root {
-    --off-white: white;
-    --off-black: black;
-    --ghost-yellow: #38ff15;
-    --pink: #f27cff;
-    --sans: "Inclusive Sans";
-    --serif: "Merriweather";
-    --xs: 0.5rem;
-    --sm: 1rem;
-    --md: 2rem;
-    --lg: 3rem;
-    --xl: 4rem;
-  }
-  /** typography */
-  a,
-  a:link {
-    text-decoration: none;
-    width: fit-content;
-    color: var(--off-black);
-  }
-  a:hover {
-    cursor: pointer;
-  }
-  .slot {
-    padding: 1rem;
-  }
-</style>

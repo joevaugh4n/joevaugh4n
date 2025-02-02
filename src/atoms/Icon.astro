@@ -9,11 +9,5 @@ const { path, url, title } = Astro.props;
 ---
 
 <a href={url} title={title}>
-  <img src={path.src} alt={title} />
+  <img src={path.src} alt={title} class="w-8 hover:opacity-80" />
 </a>
-
-<style>
-  img {
-    height: var(--md);
-  }
-</style>

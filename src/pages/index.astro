@@ -6,59 +6,36 @@ import kitty from "../assets/kitty.webp";
 ---
 
 <Layout title="Joe Vaughan">
-  <p>welcome to my new blog! first posts coming soon :) in the meantime please enjoy this beautiful computer</p>
-  <img src={kitty.src} class="kitty" alt="a hello kitty computer" />
-  <ul>
+  <h2 class="text-2xl font-bold font-serif text-center text-balance">
+    ✨ Social media skills for museums and galleries ✨
+  </h2>
+  <section class="grid lg:grid-cols-2 gap-4 px-8">
     {
       posts.map((post) => (
-        <li class="post" tabindex="0">
+        <div
+          class="
+    bg-amber-200
+    p-8
+    rounded
+    flex
+    flex-col
+    border-1"
+          tabindex="0"
+        >
+          <h2 class="font-serif text-xl font-semibold mb-2">
+            {post.data.title}
+          </h2>
+          <p class="text-sm mb-2">{post.data.date}</p>
+          <p class="text-sm mb-8 ">{post.data.description}</p>
           <a
+            class="self-center p-1 text-white min-w-32 bg-blue-800 text-center rounded-sm border border-transparent hover:bg-white hover:text-black hover:border-black"
             href={`/posts/${post.id}`}
             title={`${post.data.title}, by Joe Vaughan`}
           >
-            <p class="date">{post.data.date}</p>
-            <h2>{post.data.title}</h2>
-            <p class="description">{post.data.description}</p>
+            Read now
           </a>
-        </li>
+        </div>
       ))
     }
-  </ul>
+  </section>
 </Layout>
-
-<style>
-  p {
-    padding-bottom: 1rem;
-    line-height: 1.8
-  }
-  .kitty {
-    width: 75vw;
-  }
-  ul {
-    display: flex;
-    list-style: none;
-    flex-direction: column;
-    gap: var(--lg);
-    margin-right: 2rem;
-  }
-  .post {
-    padding: 1rem;
-    border-bottom: solid 1px black;
-  }
-  .post:hover {
-    background-color: rgb(251, 243, 232);
-  }
-  .post h2 {
-    margin-bottom: var(--sm);
-    font-weight: 500;
-    font-size: 2rem;
-    color: var(--pink);
-  }
-  .post .date {
-    color: var(--off-black);
-    margin-bottom: var(--xs);
-  }
-  .post .description {
-    color: var(--off-black);
-  }
-</style>
