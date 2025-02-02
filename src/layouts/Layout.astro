@@ -9,14 +9,16 @@ const { title } = Astro.props;
 <html lang="en">
   <Head title={title} />
   <body class="antialiased">
-    <section class="px-4 flex gap-y-20 flex-col mx-auto justify-center">
-      <Header />
-      <section class="md:w-4/5 md:mx-auto flex flex-col gap-y-20">
-        <slot />
-      </section>
-      <footer class="self-center mb-8 font-sans text-sm">
-        © Joe Vaughan, 2025
-      </footer>
-    </section>
+    <Header />
+    <slot />
+    <footer
+      class="md:px-12
+        px-6 self-center
+        my-8
+        font-sans
+        text-sm"
+    >
+      © Joe Vaughan, 2025
+    </footer>
   </body>
 </html>

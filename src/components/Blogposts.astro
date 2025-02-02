@@ -1,0 +1,36 @@
+---
+import { getCollection } from "astro:content";
+const posts = (await getCollection("blog")).sort(
+  (a, b) => new Date(b.data.date).getTime() - new Date(a.data.date).getTime()
+);
+---
+
+<section class="py-8 md:px-12 px-6">
+  <h2 class="text-2xl mb-3">Posts</h2>
+  <section class="grid md:grid-cols-2 gap-4 border-b border-indigo-50">
+    {
+      posts.map((post) => (
+        <div
+          class="
+          bg-amber-200
+          px-4 py-8
+          rounded
+          flex
+          flex-col"
+          tabindex="0"
+        >
+          <h3 class="font-serif text-xl font-medium mb-2">{post.data.title}</h3>
+          <p class="text-sm mb-2">{post.data.date}</p>
+          <p class="text-sm mb-8 text-pretty ">{post.data.description}</p>
+          <a
+            class="self-center p-1 text-white min-w-42 min-h-8 bg-blue-800 text-center rounded-sm border border-transparent active:bg-white hover:bg-white active:text-black active:border-black hover:text-black hover:border-black"
+            href={`/posts/${post.id}`}
+            title={`${post.data.title}, by Joe VaughFan`}
+          >
+            Read now
+          </a>
+        </div>
+      ))
+    }
+  </section>
+</section>
