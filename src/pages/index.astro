@@ -1,6 +1,8 @@
 ---
 import { getCollection } from "astro:content";
-const posts = await getCollection("blog");
+const posts = (await getCollection("blog")).sort(
+  (a, b) => new Date(b.data.date).getTime() - new Date(a.data.date).getTime()
+);
 import Layout from "../layouts/Layout.astro";
 import kitty from "../assets/kitty.webp";
 ---
@@ -26,7 +28,7 @@ import kitty from "../assets/kitty.webp";
             {post.data.title}
           </h2>
           <p class="text-sm mb-2">{post.data.date}</p>
-          <p class="text-sm mb-8 ">{post.data.description}</p>
+          <p class="text-sm mb-8 text-pretty ">{post.data.description}</p>
           <a
             class="self-center p-1 text-white min-w-42 min-h-8 bg-blue-800 text-center rounded-sm border border-transparent active:bg-white hover:bg-white active:text-black active:border-black hover:text-black hover:border-black"
             href={`/posts/${post.id}`}

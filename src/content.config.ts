@@ -14,7 +14,7 @@ const blog = defineCollection({
     description: z.string(),
     summary: z.string().optional(),
     tags: z
-      .array(z.enum(["social media", "blog", "museum", "history"]))
+      .array(z.enum(["social media", "blog", "museum", "weeknotes"]))
       .optional(),
   }),
 });

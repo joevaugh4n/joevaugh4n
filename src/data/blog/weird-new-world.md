@@ -1,6 +1,6 @@
 ---
 title: Weird New World
-date: 2025-02-02
+date: 2025-02-01
 description: Aiming to help you understand new social media a little better.
 tags:
   - museum
