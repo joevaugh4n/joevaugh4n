@@ -6,9 +6,11 @@ tags:
   - museum
 ---
 
-Social media today looks very different to a couple of years ago. I'm getting a lot of questions about it over Bluesky and email about how to best use social media, how to understand new platforms, and report on performance (which feels especially important when you're setting up somewhere new).
+Social media today looks very different to a couple of years ago.
 
-Rather than write a bunch of emails, my plan is to take these subjects on in a few blogposts, making resources that I hope will be illuminating for anyone working in social media but especially for my colleagues across the arts and heritage.
+On both Bluesky and email, I'm getting a lot of questions about how to respond to it. These includes how to best use social media, how to understand new platforms, and how to report on performance (which feels especially important when you're setting up somewhere new).
+
+Rather than write a bunch of direct messages or emails, my plan is to take these subjects on in a few blogposts, making resources that I hope will be illuminating for anyone working in social media but especially for my colleagues across the arts and heritage.
 
 For my first post, I'm going to take on the subject of Bluesky's analytics (or, the lack thereof) and what you can do instead to report on Bluesky engagement.
 
