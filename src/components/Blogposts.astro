@@ -5,9 +5,9 @@ const posts = (await getCollection("blog")).sort(
 );
 ---
 
-<section class="py-8 md:px-12 px-6">
+<section class="py-8 md:mx-12 mx-6 border-b border-indigo-50">
   <h2 class="text-2xl mb-3">Posts</h2>
-  <section class="grid md:grid-cols-2 gap-4 border-b border-indigo-50">
+  <section class="grid md:grid-cols-2 gap-4">
     {
       posts.map((post) => (
         <div
@@ -25,7 +25,7 @@ const posts = (await getCollection("blog")).sort(
           <a
             class="self-center p-1 text-white min-w-42 min-h-8 bg-blue-800 text-center rounded-sm border border-transparent active:bg-white hover:bg-white active:text-black active:border-black hover:text-black hover:border-black"
             href={`/posts/${post.id}`}
-            title={`${post.data.title}, by Joe VaughFan`}
+            title={`✨ ${post.data.title}, by Joe Vaughan`}
           >
             Read now
           </a>

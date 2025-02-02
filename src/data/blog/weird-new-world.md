@@ -1,7 +1,7 @@
 ---
 title: Weird New World
 date: 2025-02-01
-description: Aiming to help you understand new social media a little better.
+description: The Internet is weird. We can work it out.
 tags:
   - museum
 ---
