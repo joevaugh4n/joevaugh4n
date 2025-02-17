@@ -3,13 +3,20 @@ import Layout from "../layouts/Layout.astro";
 ---
 
 <Layout title="Joe Vaughan">
-  <header class="h-[90vh] relative border-b border-dashed">
+  <header class="h-[90vh] relative border-b bg-amber-50 p-2">
     <hgroup class="absolute top-40 right-5">
-      <h1 class="font-bold pb-2 uppercase md:text-8xl text-4xl">Joe Vaughan</h1>
-      <p>Marketer, developer, designer, creator</p>
+      <h1 class="font-bold pb-2 uppercase">Joe Vaughan</h1>
+      <p>marketer, designer, developer ❤️</p>
     </hgroup>
   </header>
-  <section class="prose border-b border-dashed flex flex-col gap-4 py-8">
+  <section class="py-8 border-b">
+    <marquee
+      >follow me on <a class='text-blue underline font-bold' href="https://bsky.app/profile/joevaughan.net">
+        bluesky</a
+      ></marquee
+    >
+  </section>
+  <section class="prose bg-emerald-50  border-b flex flex-col gap-4 py-8 h-[90vh]">
     <p>
       <b>Joe Vaughan</b> (he/him) is an arts marketer, content creator, and writer.
       His work has been featured in international press. He currently leads marketing
@@ -17,9 +24,12 @@ import Layout from "../layouts/Layout.astro";
       the Internet.
     </p>
   </section>
-  <section
-    class="prose border-b border-dashed flex flex-col items-end gap-4 py-8"
-  >
-    <p>more website under construction</p>
+  <section class="prose border-b flex flex-col items-end gap-4 py-8 h-[90vh]">
+    <p>website under construction</p>
   </section>
+
+  <footer class="py-4 font-sans
+  text-sm text-center">
+    © Joe Vaughan, 2025
+  </footer>
 </Layout>

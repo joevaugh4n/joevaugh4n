@@ -10,9 +10,11 @@ main>p {
 }
 
 .prose {
-    p {
-        @apply max-w-2/3 leading-normal
-    }
+    @apply p-8
+}
+
+.prose>p {
+    @apply max-w-[60ch] leading-normal
 }
 
 main>p:nth-child(1) {

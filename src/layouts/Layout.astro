@@ -7,13 +7,7 @@ const { title } = Astro.props;
 <!doctype html>
 <html lang="en">
   <Head title={title} />
-  <body class="antialiased p-4">
+  <body class="antialiased">
     <slot />
-    <footer class="self-center
-        my-8
-        font-sans
-        text-sm">
-      © Joe Vaughan, 2025
-    </footer>
   </body>
 </html>
