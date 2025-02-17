@@ -1,12 +1,25 @@
 ---
-import About from "../components/About.astro";
-import Blogposts from "../components/Blogposts.astro";
 import Layout from "../layouts/Layout.astro";
-import SiteTitle from "../components/SiteTitle.astro";
 ---
 
 <Layout title="Joe Vaughan">
-  <SiteTitle />
-  <Blogposts />
-  <About />
+  <header class="h-[90vh] relative border-b border-dashed">
+    <hgroup class="absolute top-40 right-5">
+      <h1 class="font-bold pb-2 uppercase md:text-8xl text-4xl">Joe Vaughan</h1>
+      <p>Marketer, developer, designer, creator</p>
+    </hgroup>
+  </header>
+  <section class="prose border-b border-dashed flex flex-col gap-4 py-8">
+    <p>
+      <b>Joe Vaughan</b> (he/him) is an arts marketer, content creator, and writer.
+      His work has been featured in international press. He currently leads marketing
+      at The Museum of English Rural Life, and divides his time between Reading and
+      the Internet.
+    </p>
+  </section>
+  <section
+    class="prose border-b border-dashed flex flex-col items-end gap-4 py-8"
+  >
+    <p>more website under construction</p>
+  </section>
 </Layout>
