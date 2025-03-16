@@ -36,6 +36,7 @@
 nav.top-menu {
     display: flex;
     justify-content: flex-end;
+    gap: 0.5rem;
 }
 
 nav.menu {

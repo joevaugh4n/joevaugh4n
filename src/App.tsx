@@ -1,6 +1,7 @@
 import "./app.css";
 import { useState } from "react";
 import Bluesky from "/bluesky.svg";
+import LinkedIn from "/linkedin.svg";
 
 interface ButtonProps {
   onClickAction: (arg: React.ReactNode) => void;
@@ -89,6 +90,11 @@ function App() {
           title="Bluesky"
           icon={Bluesky}
           url="https://bsky.app/profile/joevaughan.net"
+        />
+        <SocialIcon
+          title="LinkedIn"
+          icon={LinkedIn}
+          url="https://www.linkedin.com/in/joevaugh4n/"
         />
       </nav>
       <h1>Joe Vaughan</h1>
