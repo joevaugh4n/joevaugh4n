@@ -59,7 +59,7 @@ function App() {
         2019-2023. From 2023-2024 I was the first marketing hire at{" "}
         <a href="https://storybook.js.org">Storybook</a>, one of the world's
         most popular tools for app development. Before then, I was a copywriter
-        for a bunch of brands that you probably think about every day.
+        for a bunch of brands (including UK household names).
       </>
     ),
   };
