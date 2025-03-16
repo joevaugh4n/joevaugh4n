@@ -7,18 +7,6 @@
     --white: #FFFAFA;
 }
 
-.vanilla {
-    background-color: var(--vanilla);
-}
-
-.blue {
-    background-color: var(--blue);
-}
-
-.orange {
-    background-color: var(--orange);
-}
-
 * {
     border: none;
     padding: 0;
@@ -64,18 +52,23 @@ button.menu-item {
     height: 36px;
     padding: 1rem 0.5rem;
     font-family: "Merriweather", serif;
-    font-weight: 300;
     font-size: 1rem;
     cursor: pointer;
-    transition: height 0.3s ease;
+    transition: font-weight ease 0.3s;
 }
 
 button.menu-item:hover {
-    height: 38px;
+    background-color: var(--vanilla);
+    transition: background-color ease 0.3s;
 }
 
 .active {
-    background-color: red;
+    background-color: var(--vanilla);
+}
+
+.inactive {
+    background-color: var(--silver);
+    font-weight: 300;
 }
 
 .highlight-text {

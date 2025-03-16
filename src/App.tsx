@@ -6,14 +6,26 @@ interface ButtonProps {
   onClickAction: (arg: React.ReactNode) => void;
   target: React.ReactNode;
   caption: string;
-  colour: string;
+  setActive: (value: number) => void;
+  index: number;
+  isActive?: boolean;
 }
 
-function Button({ onClickAction, target, caption, colour }: ButtonProps) {
+function Button({
+  onClickAction,
+  target,
+  caption,
+  setActive,
+  index,
+  isActive,
+}: ButtonProps) {
   return (
     <button
-      onClick={() => onClickAction(target)}
-      className={`menu-item ${colour} ${target ? "" : "active"}`}
+      onClick={() => {
+        onClickAction(target);
+        setActive(index);
+      }}
+      className={`menu-item ${isActive ? "active" : "inactive"}`}
     >
       {caption}
     </button>
@@ -35,6 +47,7 @@ function SocialIcon({ url, title, icon }: IconProps) {
 }
 function App() {
   const [text, setText] = useState<React.ReactNode>("");
+  const [active, setActive] = useState(0);
   const career = {
     title: "Career",
     body: (
@@ -45,7 +58,7 @@ function App() {
         <a href="https://www.readingmuseum.org.uk/">Reading Museum</a> from
         2019-2023. From 2023-2024 I was the first marketing hire at{" "}
         <a href="https://storybook.js.org">Storybook</a>, one of the world's
-        most popular tools for app development. Before that, I was a copywriter
+        most popular tools for app development. Before then, I was a copywriter
         for a bunch of brands that you probably think about every day.
       </>
     ),
@@ -81,27 +94,33 @@ function App() {
       <h1>Joe Vaughan</h1>
       <p className="intro">
         Marketer, writer, tinkerer. Wearer of many hats. I take niche topics and
-        make content showing why they are the most important thing in the entire
-        world.
+        make content showing why they are <i>the</i> most important thing in the
+        entire world.
       </p>
       <nav className="menu">
         <Button
           onClickAction={setText}
+          setActive={setActive}
           target={career.body}
-          colour="vanilla"
           caption="Career"
+          index={1}
+          isActive={active === 1}
         />
         <Button
           onClickAction={setText}
+          setActive={setActive}
           target={contact}
-          colour="orange"
           caption="Contact"
+          index={2}
+          isActive={active === 2}
         />
         <Button
           onClickAction={setText}
+          setActive={setActive}
           target={website}
           caption="Website"
-          colour="blue"
+          index={3}
+          isActive={active === 3}
         />
       </nav>
       {
