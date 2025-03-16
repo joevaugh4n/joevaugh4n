@@ -58,9 +58,11 @@ button.menu-item {
     transition: font-weight ease 0.3s;
 }
 
-button.menu-item:hover {
+button.menu-item:hover,
+button.menu-item:focus {
     background-color: var(--vanilla);
     transition: background-color ease 0.3s;
+    outline: none;
 }
 
 .active {
