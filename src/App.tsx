@@ -110,7 +110,7 @@ function App() {
   };
 
   const [text, setText] = useState<React.ReactNode>(Career.body);
-  const [active, setActive] = useState(0);
+  const [active, setActive] = useState(1);
 
   const Contact = (
     <>
