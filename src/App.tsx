@@ -119,22 +119,6 @@ function App() {
     </>
   );
 
-  const Website = (
-    <>
-      <p>
-        I love coding. I built this site using
-        JavaScript.
-      </p>
-      <p>
-        I find web development extremely satisfying and have made a few websites
-        as freelance projects for my friends, including{" "}
-        <a href="https://adamkoszary.co.uk/">Adam Koszary</a> and{" "}
-        <a href="https://happypandareading.co.uk/">Happy Panda Reading</a>.
-      </p>
-      <p>If you ever need web help, reach out - happy to chat.</p>
-    </>
-  );
-
   return (
     <div className="container">
       <nav className="top-menu">
@@ -170,14 +154,6 @@ function App() {
           caption="Contact"
           index={2}
           isActive={active === 2}
-        />
-        <Button
-          onClickAction={setText}
-          setActive={setActive}
-          target={Website}
-          caption="Website"
-          index={3}
-          isActive={active === 3}
         />
       </nav>
       {
