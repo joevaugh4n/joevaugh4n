@@ -48,76 +48,44 @@ function SocialIcon({ url, title, icon }: IconProps) {
 }
 
 function App() {
-  const Career = {
-    title: "Career",
+
+  interface TextOption {
+    /** The name. */
+    title: string;
+    /** React component. */
+    body: React.ReactNode;
+  }
+
+  const TextOptions: TextOption[] = [{
+    title: "Professional",
+    body: (
+      <><p>I take niche topics and show why they are <i>the</i> most important
+        thing in the entire world.</p>
+        <p>I run <a href="https://bsky.app/profile/themerl.bsky.social">The Museum of English Rural Life's very popular Bluesky account</a> and co-host and produce its podcast, <a href="https://merl.reading.ac.uk/explore/absolute-units/">Absolute Units</a>.</p>
+        <p>I have spoken about museum social media at international conferences (like BrightonSEO and the Museum + Heritage Show) and been interviewed by international press (including NPR, Polygon, The Guardian, and BBC Radio).</p><p>I divide my time between Reading and The Internet.</p>
+      </>
+    )
+  },
+  {
+    title: 'Comedian',
     body: (
       <>
-        <p>
-          I always wanted a writing job. When I was a student I founded and
-          edited a successful international poetry zine and learned to promote
-          it with social media. I also did socials for my friends' forays into
-          student politics.
-        </p>
-        <p>
-          In 2016, fresh from a Creative Writing MA and a year's stint writing
-          letters for a wonderfully eccentric Grantham legal office, I joined a
-          marketing agency in Leeds and wrote copy for brands that almost
-          inevitably pop up in your algorithm and high streets. People thought I
-          was funny and had a Good Turn Of Phrase, so I ended up doing more and
-          more on social media.
-        </p>
-        <p>
-          Museum jobs are notoriously few and far between. I never imagined a
-          career pathway to working in the arts. But in 2019, an opportunity
-          arose for me to apply to become the social media lead and digital
-          content editor for The Museum of English Rural Life and Reading Museum
-          (Museums Partnership Reading).
-        </p>
-
-        <p>
-          I was a huge fan of The MERL socials, admiring its creativity and its
-          clear inspiration by werid US brands on Twitter. To this day my
-          favourite brand social media acount is MoonPie. So I applied, got the
-          job, moved down to Reading, and the rest is history.
-        </p>
-        <p>
-          My work for Reading's museums generated tens of millions of
-          impressions, viral campaigns, and earned media attention from places
-          like Polygon, The Guardian, NPR, BBC Radio, and more. I also led both
-          museums' digital content plans throughout COVID, which was very tough
-          but very rewarding.
-        </p>
-        <p>
-          In 2023, after completing the COVID mission, I needed a change of
-          scene and joined a US-based tech company for just over a year. I was a
-          fully-remote social media manager. This was extremely informative, and
-          I met some of the smartest, kindest people I have ever worked with. I
-          also learned how to be a web developer.
-        </p>
-        <p>
-          In 2024 the opportunity arose to rejoin The MERL as their Marketing
-          Manager, replacing my brilliant former boss Alison Hilton. So I took
-          it. Today, I lead on brand, marketing, socials, and produce and
-          co-host the museum's podcast, Absolute Units.
-        </p>
-        <p>
-          If you ever want to chat about my career or your career, please don't
-          hesitate to reach out. I am very happy to talk about it and share
-          advice.
-        </p>
+        <p>I'm a baby comedian and I have started doing gigs. I'll list more here in the future (last updated 8 June 2025).</p>
       </>
-    ),
-  };
+    )
+  },
+  {
+    title: 'Contact',
+    body: (
+      <>
+        <a href="mailto:jbvaughan1993@gmail.com">email</a>
+      </>
+    )
+  }
+  ]
 
-  const [text, setText] = useState<React.ReactNode>(Career.body);
-  const [active, setActive] = useState(1);
-
-  const Contact = (
-    <>
-      The best place is probably{" "}
-      <a href="https://www.linkedin.com/in/joevaugh4n/">LinkedIn</a>.
-    </>
-  );
+  const [text, setText] = useState<React.ReactNode>(TextOptions[0].body);
+  const [active, setActive] = useState(0);
 
   return (
     <div className="container">
@@ -133,29 +101,25 @@ function App() {
           url="https://www.linkedin.com/in/joevaugh4n/"
         />
       </nav>
-      <h1>Joe Vaughan</h1>
-      <p className="intro">
-        I take niche topics and show why they are <i>the</i> most important
-        thing in the entire world.
-      </p>
-      <nav className="menu">
-        <Button
-          onClickAction={setText}
-          setActive={setActive}
-          target={Career.body}
-          caption="Career (bio)"
-          index={1}
-          isActive={active === 1}
-        />
-        <Button
-          onClickAction={setText}
-          setActive={setActive}
-          target={Contact}
-          caption="Contact"
-          index={2}
-          isActive={active === 2}
-        />
-      </nav>
+      <header>
+        <h1>Joe Vaughan</h1>
+        <p className="intro">
+          rest in peace pirates you would have loved hookup culture
+        </p>
+        <nav className="menu">
+          {TextOptions.map((option, i) => (
+            <Button
+              key={option.title}
+              onClickAction={setText}
+              setActive={setActive}
+              target={option.body}
+              caption={option.title}
+              index={i}
+              isActive={active === i}
+            />
+          ))}
+        </nav>
+      </header>
       {
         // Hide on mount
         text != "" && <p className="highlight-text">{text}</p>
