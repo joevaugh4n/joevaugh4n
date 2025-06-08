@@ -1,4 +1,5 @@
 import "./app.css";
+import BabyWithAGun from "/baby.jpg"
 import { useState } from "react";
 import Bluesky from "/bluesky.svg";
 import LinkedIn from "/linkedin.svg";
@@ -75,6 +76,13 @@ function App() {
     )
   },
   {
+    title: 'baby with a gun',
+    body: (
+      <><img src={BabyWithAGun} alt='baby with a gun' />
+      </>
+    )
+  },
+  {
     title: 'Contact',
     body: (
       <>
@@ -121,8 +129,7 @@ function App() {
         </nav>
       </header>
       {
-        // Hide on mount
-        text != "" && <p className="highlight-text">{text}</p>
+        text != "" && TextOptions[active].title.toLowerCase() != 'baby with a gun' ? <p className="highlight-text">{text}</p> : <div>{text}</div>
       }
     </div>
   );
