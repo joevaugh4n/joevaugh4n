@@ -71,14 +71,15 @@ function App() {
     title: 'Comedian',
     body: (
       <>
-        <p>I'm a baby comedian and I have started doing gigs. I'll list more here in the future (last updated 8 June 2025).</p>
+        <p>I'm a baby comedian and I have started doing gigs!</p>
+        <p> I'll list more here in the future (last updated 8 June 2025).</p>
       </>
     )
   },
   {
     title: 'baby with a gun',
     body: (
-      <><img src={BabyWithAGun} alt='baby with a gun' />
+      <><img src={BabyWithAGun} alt='baby with a gun' className='baby' />
       </>
     )
   },

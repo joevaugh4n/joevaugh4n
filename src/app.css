@@ -42,6 +42,7 @@ nav.top-menu {
 nav.menu {
     margin-bottom: 2rem;
     display: flex;
+    flex-wrap: wrap;
     gap: 0.5rem;
 }
 
@@ -92,7 +93,7 @@ button.menu-item:focus {
     max-height: 34px;
 }
 
-/* Typography */
+/* Typography and design assets */
 
 h1 {
     font-family: "Montserrat", sans-serif;
@@ -120,4 +121,8 @@ p.highlight-text {
 a {
     color: blue;
     width: fit-content;
+}
+
+.baby {
+    max-width: 90vw;
 }
