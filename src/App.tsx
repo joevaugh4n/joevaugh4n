@@ -3,36 +3,6 @@ import Bluesky from "/bluesky.svg";
 import LinkedIn from "/linkedin.svg";
 import Joe from "/joe.jpg"
 
-interface ButtonProps {
-  onClickAction: (arg: React.ReactNode) => void;
-  target: React.ReactNode;
-  caption: string;
-  setActive: (value: number) => void;
-  index: number;
-  isActive?: boolean;
-}
-
-function Button({
-  onClickAction,
-  target,
-  caption,
-  setActive,
-  index,
-  isActive,
-}: ButtonProps) {
-  return (
-    <button
-      onClick={() => {
-        onClickAction(target);
-        setActive(index);
-      }}
-      className={`menu-item ${isActive ? "active" : "inactive"}`}
-    >
-      {caption}
-    </button>
-  );
-}
-
 interface IconProps {
   url: string;
   title: string;
