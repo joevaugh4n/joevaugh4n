@@ -86,7 +86,7 @@ button.menu-item:focus {
 
 .social-icon {
     max-height: 32px;
-    transition: max-height 0.3s ease;
+    transition: max-height 0.2s ease;
 }
 
 .social-icon:hover {
@@ -95,9 +95,13 @@ button.menu-item:focus {
 
 /* Typography and design assets */
 
+.title {
+    margin-bottom: 2rem;
+}
+
 h1 {
     font-family: "Montserrat", sans-serif;
-    margin-bottom: 2rem;
+    margin-bottom: 1rem;
     font-weight: 800;
 }
 
@@ -124,5 +128,9 @@ a {
 }
 
 .baby {
+    max-width: 90vw;
+}
+
+.portrait {
     max-width: 90vw;
 }
