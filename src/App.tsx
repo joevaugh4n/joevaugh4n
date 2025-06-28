@@ -1,6 +1,7 @@
 import "./app.css";
 import Bluesky from "/bluesky.svg";
 import LinkedIn from "/linkedin.svg";
+import YouTube from "/youtube.png";
 import Joe from "/joe.jpg"
 
 interface IconProps {
@@ -31,13 +32,18 @@ function App() {
           icon={LinkedIn}
           url="https://www.linkedin.com/in/joevaugh4n/"
         />
+        <SocialIcon
+          title="YouTube"
+          icon={YouTube}
+          url="https://www.youtube.com/@joevaughanleaks"
+        />
       </nav>
       <header className='title'>
         <h1>Joe Vaughan</h1>
-        <p>Content lead at The Museum of English Rural Life. Comedian. <a href='mailto:jbvaughan1993@gmail.com'>Contact</a>.</p>
+        <p>Content lead at The Museum of English Rural Life. Host of <a href='https://merl.reading.ac.uk/explore/absolute-units/'>Absolute Units</a>. Comedian. <a href='mailto:jbvaughan1993@gmail.com'>Contact</a>.</p>
       </header>
 
-      <img src={Joe} className='portrait' />
+      <img src={Joe} className='portrait' alt='Joe Vaughan standing on a stage, speaking to an audience.' />
 
     </div>
   );
