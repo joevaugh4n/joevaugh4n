@@ -99,7 +99,8 @@ button.menu-item:focus {
     margin-bottom: 2rem;
 }
 
-h1 {
+h1,
+h2 {
     font-family: "Montserrat", sans-serif;
     margin-bottom: 1rem;
     font-weight: 800;
@@ -111,6 +112,7 @@ p {
     max-width: 60ch;
     line-height: 1.7;
     text-wrap: pretty;
+    margin-bottom: 0.5rem;
 }
 
 p.intro {
@@ -133,4 +135,28 @@ a {
 
 .portrait {
     max-width: 90vw;
+    margin-bottom: 2rem;
+    border-radius: 4px;
+}
+
+.shows {
+    margin-bottom: 2rem;
+}
+
+.shows>ul {
+    list-style: none;
+    font-weight: 300;
+    gap: 0.75rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.show>.title,
+.show>.location {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 600;
+}
+
+.show>.date {
+    font-family: "Merriweather", serif;
 }
