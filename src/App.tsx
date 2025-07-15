@@ -2,7 +2,7 @@ import "./app.css";
 import Bluesky from "/bluesky.svg";
 import LinkedIn from "/linkedin.svg";
 import YouTube from "/youtube.png";
-import Joe from "/joe.jpg";
+import { ShowList, Show } from "./ShowList";
 
 interface IconProps {
   url: string;
@@ -15,22 +15,6 @@ function SocialIcon({ url, title, icon }: IconProps) {
     <a href={url} title={title}>
       <img src={icon} alt={title} className="social-icon" />
     </a>
-  );
-}
-
-interface ShowProps {
-  title: string;
-  date: string;
-  location: string;
-}
-
-function Show({ title, date, location }: ShowProps) {
-  return (
-    <li className="show">
-      <span className="title">{title}</span>{" "}
-      <span className="location">{`(${location})`}</span> {date && "- "}{" "}
-      <span className="date">{date}</span>
-    </li>
   );
 }
 
@@ -61,33 +45,22 @@ function App() {
           <a href="https://merl.reading.ac.uk/explore/absolute-units/">
             Absolute Units
           </a>
-          . Comedian.
-        </p>
-        <p>
-          <a href="mailto:jbvaughan1993@gmail.com">Contact</a>.
+          . Comedian. <a href="mailto:jbvaughan1993@gmail.com">Contact</a>.
         </p>
       </header>
-
-      <img
-        src={Joe}
-        className="portrait"
-        alt="Joe Vaughan standing on a stage, speaking to an audience."
-      />
 
       <hgroup className="shows">
         <h2>Shows</h2>
         <ul>
-          <Show
-            title="Ginger Giggle Club"
-            location="Grays, Essex"
-            date="19 July 2025"
-          />
-          <Show title="Healing Comedy" location="Ealing" date="27 July 2025" />
-          <Show
-            title="Comedy Bandits"
-            location="Clapham"
-            date="19 September 2025"
-          />
+          {ShowList.slice()
+            .sort((a, b) => a.date.getTime() - b.date.getTime())
+            .map((show) => (
+              <Show
+                title={show.title}
+                location={show.location}
+                date={show.date}
+              />
+            ))}
         </ul>
       </hgroup>
     </div>

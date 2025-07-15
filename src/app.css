@@ -4,35 +4,63 @@
     --vanilla: #FFEE8C;
     --blue: #B3EBF2;
     --orange: #FD5E53;
-    --white: #fdfdfd;
+    --white: #ffffff;
 }
 
 * {
     border: none;
     padding: 0;
     margin: 0;
-    color: var(--black);
-    background-color: var(--white);
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    font-family: sans-serif;
+}
+
+body {
+    background-image: url('/joe.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    margin: 0;
+    padding: 0;
+    color: var(--white);
+    position: relative;
+}
+
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.35);
+    z-index: 0;
 }
 
 /* Container */
 .container {
-    margin-left: 2rem;
-    margin-right: 2rem;
-    margin-top: 2rem;
+    position: relative;
+    z-index: 1;
+    padding: 2rem;
+    border-radius: 8px;
     max-width: 90vw;
+    margin: 2rem auto;
+    color: var(--white);
 }
 
+/* Responsive */
 @media (max-width: 800px) {
     .container {
-        margin-left: 1rem;
-        margin-right: 1rem;
-        margin-top: 2rem;
+        margin: 2rem 1rem;
     }
 }
 
 /* Elements */
-
 nav.top-menu {
     display: flex;
     justify-content: flex-end;
@@ -56,54 +84,51 @@ button.menu-item {
     font-family: "Merriweather", serif;
     font-size: 1rem;
     cursor: pointer;
-    transition: font-weight ease 0.3s;
+    transition: background-color 0.3s ease, font-weight 0.3s ease;
+    background-color: rgba(255, 255, 255, 0.15);
+    color: var(--white);
 }
 
 button.menu-item:hover,
 button.menu-item:focus {
     background-color: var(--vanilla);
-    transition: background-color ease 0.3s;
+    color: var(--black);
     outline: none;
 }
 
 .active {
     background-color: var(--vanilla);
+    color: var(--black);
 }
 
 .inactive {
-    background-color: var(--silver);
+    background-color: rgba(255, 255, 255, 0.15);
     font-weight: 300;
+    color: var(--white);
 }
 
 .highlight-text {
-    border: 1px var(--silver) solid;
+    border: 1px solid var(--silver);
     border-radius: 12px;
-    padding: 1rem 1rem;
+    padding: 1rem;
     display: flex;
     flex-direction: column;
     gap: 1rem;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: var(--white);
 }
 
-.social-icon {
-    max-height: 32px;
-    transition: max-height 0.2s ease;
-}
-
-.social-icon:hover {
-    max-height: 34px;
-}
-
-/* Typography and design assets */
-
+/* Typography */
 .title {
     margin-bottom: 2rem;
+    color: var(--white);
 }
 
-h1,
-h2 {
+h1, h2 {
     font-family: "Montserrat", sans-serif;
     margin-bottom: 1rem;
     font-weight: 800;
+    color: var(--white);
 }
 
 p {
@@ -113,6 +138,7 @@ p {
     line-height: 1.7;
     text-wrap: pretty;
     margin-bottom: 0.5rem;
+    color: var(--white);
 }
 
 p.intro {
@@ -122,41 +148,54 @@ p.intro {
 
 p.highlight-text {
     max-width: 60ch;
+    color: var(--white);
 }
 
 a {
-    color: blue;
+    color: var(--blue);
     width: fit-content;
 }
 
-.baby {
+/* Media & Visual */
+.social-icon {
+    max-height: 32px;
+    transition: max-height 0.2s ease;
+}
+
+.social-icon:hover {
+    max-height: 34px;
+}
+
+.baby, .portrait {
     max-width: 90vw;
+    border-radius: 4px;
 }
 
 .portrait {
-    max-width: 90vw;
     margin-bottom: 2rem;
-    border-radius: 4px;
 }
 
 .shows {
     margin-bottom: 2rem;
 }
 
-.shows>ul {
+.shows > ul {
     list-style: none;
     font-weight: 300;
     gap: 0.75rem;
     display: flex;
     flex-direction: column;
+    color: var(--white);
 }
 
-.show>.title,
-.show>.location {
+.show > .title,
+.show > .location {
     font-family: "Montserrat", sans-serif;
     font-weight: 600;
+    color: var(--white);
 }
 
-.show>.date {
+.show > .date {
     font-family: "Merriweather", serif;
+    color: var(--white);
 }
