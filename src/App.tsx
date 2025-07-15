@@ -56,6 +56,8 @@ function App() {
             .sort((a, b) => a.date.getTime() - b.date.getTime())
             .map((show) => (
               <Show
+                key={show.id}
+                id={show.id}
                 title={show.title}
                 location={show.location}
                 date={show.date}
