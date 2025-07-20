@@ -53,6 +53,7 @@ function App() {
         <h2>Shows</h2>
         <ul>
           {ShowList.slice()
+            .filter(show => show.date > new Date()) 
             .sort((a, b) => a.date.getTime() - b.date.getTime())
             .map((show) => (
               <Show

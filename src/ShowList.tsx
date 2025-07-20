@@ -30,9 +30,15 @@ export const ShowList: ShowProps[] = [
     location: "Clapham",
     date: new Date("2025-09-19"),
   },
+  {
+    id: 4,
+    title: 'Off the Grid Comedy Club',
+    location: 'Old Street',
+    date: new Date("2025-08-31")
+  }
 ];
 
-export function Show({ title, date, location, id }: ShowProps) {
+export function Show({ title, date, location }: ShowProps) {
   return (
     <li className="show">
       <span className="title">{title}</span>{" "}
