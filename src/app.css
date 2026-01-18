@@ -6,6 +6,7 @@
 .container {
     margin: 2rem 2rem;
     width: 80vw;
+    font-family: 'Times New Roman'
 }
 
 .container>p, form {

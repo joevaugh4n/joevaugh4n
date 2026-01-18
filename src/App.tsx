@@ -4,13 +4,20 @@ function App() {
   return (
     <div className="container">
       <p>
-        <h1 className="title">Joe Vaughan</h1> is a comedian and creative based
-        in London.
+        <h1 className="title">Joe Vaughan</h1> is a comedian, creative, and
+        writer based in London.
       </p>
-      <p>He works at The Museum of English Rural Life, Reading.</p>
       <p>
-        He is really glad you visited this website to learn more and slightly
-        embarassed about the state of the place.
+        He works as a content creator at The Museum of English Rural Life,
+        University of Reading, where he hosts{" "}
+        <a href="https://merl.reading.ac.uk/explore/absolute-units/">
+          the Absolute Units podcast
+        </a>
+        .
+      </p>
+      <p>
+        He is really glad you visited this website to learn more and he is
+        slightly embarassed about the state of the place.
       </p>
       <p>
         If you would like to pull up a chair you can find a wide selection of
@@ -28,26 +35,48 @@ function App() {
         you can enter a secret into and you can just get it out of your system.
       </p>
       <p>
-        I don't know <i>how</i> to make textboxes that save responses.
+        Confession: I don't know <i>how</i> to make textboxes that save
+        responses.
       </p>
       <p>
-        {" "}
-        Even if I did know I would keep this as it is because I believe many
-        people have said they find the textbox to be useful, cathartic, and a
-        form of light relief that is hard to get in busy urban life or the
-        modern internet. It is free to use and you can use as much or as little
-        as you like.
+        Even if I did know I would keep the textbox as it is because I believe
+        many people say they find the textbox useful, cathartic, and a form of
+        light relief that's hard to get in busy urban life or the modern
+        internet. The textbox is free to use and you can use as much or as
+        little as you like.
       </p>
       <form className="secretTextbox">
         <input></input>
       </form>
       <p>
-        If you would like to give me more feedback on the secret textbox here is
-        another textbox that you can use.
+        <i>In fact</i> the more that time progresses, the more that the seasons
+        change, I have started to come to terms with the fact that more people
+        come here for the textbox than for me. This is especially pleasing
+        because the textbox occupies so much more of the space, validating my
+        design choices, which took a lot of workshopping and iteration to get
+        right.
+      </p>
+      <p>
+        Joe Vaughan is grateful to everyone who has been a part of this journey.
+      </p>
+      <p>He is a person who will live forever and never die.</p>
+      <p>
+        If you would like to give Joe feedback on the secret textbox here
+        is another textbox that you can use. This textbox uses the same
+        mechanism as the secret textbox, meaning your suggestions will stay
+        private. Joe hopes this gives you the confidence to express your
+        feedback with the force and candour that you would expect a textbox like
+        this one to receive. It is your textbox. It is a textbox that loves you.
       </p>
       <form className="secretTextbox">
         <input></input>
       </form>
+      <p>
+        Joe is always open to the idea of creating more textboxes for your use
+        and believe in the importance of user-led design. Please let Joe know
+        what you think via either of the previous textboxes. You can also write
+        him a letter.
+      </p>
       <p>
         Follow Joe on{" "}
         <a href="https://www.instagram.com/joevaughanleaks">Instagram</a> or{" "}
