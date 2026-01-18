@@ -4,12 +4,18 @@ function App() {
   return (
     <div className="container">
       <p>
-        <h1 className="title">Joe Vaughan</h1> is a comedian, creative, and
-        writer based in London.
+        <h1 className="title">
+          <b>Joe Vaughan</b>
+        </h1>{" "}
+        is a comedian, creative, and writer based in London.
       </p>
       <p>
         He works as a content creator at The Museum of English Rural Life,
-        University of Reading, where he hosts{" "}
+        University of Reading, where he runs{" "}
+        <a href="https://bsky.app/profile/themerl.bsky.social">
+          the world's largest museum Bluesky account
+        </a>{" "}
+        and hosts{" "}
         <a href="https://merl.reading.ac.uk/explore/absolute-units/">
           the Absolute Units podcast
         </a>
@@ -61,12 +67,12 @@ function App() {
       </p>
       <p>He is a person who will live forever and never die.</p>
       <p>
-        If you would like to give Joe feedback on the secret textbox here
-        is another textbox that you can use. This textbox uses the same
-        mechanism as the secret textbox, meaning your suggestions will stay
-        private. Joe hopes this gives you the confidence to express your
-        feedback with the force and candour that you would expect a textbox like
-        this one to receive. It is your textbox. It is a textbox that loves you.
+        If you would like to give Joe feedback on the secret textbox here is
+        another textbox that you can use. This textbox uses the same mechanism
+        as the secret textbox, meaning your suggestions will stay private. Joe
+        hopes this gives you the confidence to express your feedback with the
+        force and candour that you would expect a textbox like this one to
+        receive. It is your textbox. It is a textbox that loves you.
       </p>
       <form className="secretTextbox">
         <input></input>
@@ -82,6 +88,14 @@ function App() {
         <a href="https://www.instagram.com/joevaughanleaks">Instagram</a> or{" "}
         <a href="https://bsky.app/profile/joevaughan.net">Bluesky</a>.
       </p>
+      <div className="info">
+        <h2>Guide to using this website</h2>: Think of{" "}
+        <a href="/">joevaughan.net</a> like walking your dog in the park. Clean
+        up after yourself. Don't let your dog off the leash, especially when
+        there are birds around. There shouldn't be any birds but you never know.
+        They have the gift of flight. If you see any birds please let Joe know
+        via either of the feedback mechanisms.{" "}
+      </div>
     </div>
   );
 }

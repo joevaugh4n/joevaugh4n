@@ -9,13 +9,20 @@
     font-family: 'Times New Roman'
 }
 
-.container>p, form {
+.info {
+    background-color: whitesmoke;
+    padding: 8px;
+}
+
+.container>p,
+form {
     padding-bottom: 1rem;
     font-size: 1rem;
     text-wrap: pretty;
 }
 
-h1.title {
+h1,
+h2 {
     display: inline-block;
     font-size: inherit;
     font-weight: normal;
