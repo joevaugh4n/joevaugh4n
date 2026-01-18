@@ -9,8 +9,8 @@
 }
 
 .container>p, form {
-    padding-bottom: 2rem;
-    font-size: 4rem;
+    padding-bottom: 1rem;
+    font-size: 1rem;
     text-wrap: pretty;
 }
 
