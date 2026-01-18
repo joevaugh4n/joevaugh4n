@@ -79,7 +79,7 @@ function App() {
       </form>
       <p>
         Joe is always open to the idea of creating more textboxes for your use
-        and believe in the importance of user-led design. Please let Joe know
+        and believes in the importance of user-led design. Please let Joe know
         what you think via either of the previous textboxes. You can also write
         him a letter.
       </p>
@@ -90,11 +90,12 @@ function App() {
       </p>
       <div className="info">
         <h2>Guide to using this website</h2>: Think of{" "}
-        <a href="/">joevaughan.net</a> like walking your dog in the park. Clean
-        up after yourself. Don't let your dog off the leash, especially when
-        there are birds around. There shouldn't be any birds but you never know.
-        They have the gift of flight. If you see any birds please let Joe know
-        via either of the feedback mechanisms.{" "}
+        <a href="/">joevaughan.net</a> like walking your dog in the park. Please
+        clean up after yourself or your four-legged friend and don't let your
+        dog off the leash especially when there are birds around. There
+        shouldn't be any birds but you never know as they have the gift of
+        flight. If you see any birds please let Joe know via either of the
+        feedback mechanisms.{" "}
       </div>
     </div>
   );
