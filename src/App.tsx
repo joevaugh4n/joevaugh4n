@@ -1,8 +1,12 @@
 import "./app.css";
+import Joe from "/joe-portrait.jpg";
 
 function App() {
   return (
     <div className="container">
+      <header>
+        <img src={Joe} className="heroImage" alt="Joe Vaughan" />
+      </header>
       <p>
         <h1 className="title">
           <b>Joe Vaughan</b>
@@ -13,11 +17,11 @@ function App() {
         He works as a content creator at The Museum of English Rural Life,
         University of Reading, where he runs{" "}
         <a href="https://bsky.app/profile/themerl.bsky.social">
-          the world's largest museum Bluesky account
+          their social media
         </a>{" "}
         and hosts{" "}
         <a href="https://merl.reading.ac.uk/explore/absolute-units/">
-          the Absolute Units podcast
+          their podcast
         </a>
         .
       </p>
@@ -45,34 +49,41 @@ function App() {
         responses.
       </p>
       <p>
-        Even if I did know I would keep the textbox as it is because I believe
-        many people say they find the textbox useful, cathartic, and a form of
-        light relief that's hard to get in busy urban life or the modern
-        internet. The textbox is free to use and you can use as much or as
-        little as you like.
+        Even if I did know I would keep the secret textbox as it is because I
+        believe many people say they find the textbox useful, cathartic, and a
+        form of light relief that's difficult to get in today's busy, highly
+        public urban life or the modern internet.
+      </p>
+      <p>
+        The textbox is free to use and you can use it as much or as little as
+        you like.
       </p>
       <form className="secretTextbox">
         <input></input>
       </form>
       <p>
-        <i>In fact</i> the more that time progresses, the more that the seasons
-        change, I have started to come to terms with the fact that more people
-        come here for the textbox than for me. This is especially pleasing
-        because the textbox occupies so much more of the space, validating my
-        design choices, which took a lot of workshopping and iteration to get
-        right.
+        Joe Vaughan is grateful to everyone who has been a part of this journey
+        so far. If you are reading this you have joined a cohort of dedicated
+        users who progressed as far as the Second Act. This is not for nothing
+        and some achievement in some worlds. It would be virtually impossible
+        for a spider (for example) to open even the first page, let alone to
+        this later paragraph. Or to understand it.
       </p>
       <p>
-        Joe Vaughan is grateful to everyone who has been a part of this journey.
+        Second confession: I use no analytics on this website so I have no idea
+        of the number of people who are using it. But I have very good reason to
+        believe that the number is very high. Possibly into the tens of
+        trillions. It is good to have dreams and even better to have no
+        analytics.
       </p>
-      <p>He is a person who will live forever and never die.</p>
       <p>
         If you would like to give Joe feedback on the secret textbox here is
         another textbox that you can use. This textbox uses the same mechanism
-        as the secret textbox, meaning your suggestions will stay private. Joe
-        hopes this gives you the confidence to express your feedback with the
-        force and candour that you would expect a textbox like this one to
-        receive. It is your textbox. It is a textbox that loves you.
+        as the secret textbox, meaning your suggestions will stay private. The
+        designer's intent is that this gives you the confidence to express your
+        feedback with the force and candour that you would expect a textbox like
+        this one to receive. It is your textbox. It is a textbox that wants you
+        to succeed.
       </p>
       <form className="secretTextbox">
         <input></input>
@@ -86,7 +97,9 @@ function App() {
       <p>
         Follow Joe on{" "}
         <a href="https://www.instagram.com/joevaughanleaks">Instagram</a> or{" "}
-        <a href="https://bsky.app/profile/joevaughan.net">Bluesky</a>.
+        <a href="https://bsky.app/profile/joevaughan.net">Bluesky</a>. If you
+        are here on business you can also follow Joe on{" "}
+        <a href="https://www.linkedin.com/in/joevaugh4n/">LinkedIn</a>.
       </p>
       <div className="info">
         <h2>Guide to using this website</h2>: Think of{" "}
