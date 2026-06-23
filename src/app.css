@@ -1,12 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=Pliant:ital,wght@0,100..900;1,100..900&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=TikTok+Sans:opsz,wght@12..36,300..900&display=swap');
+
 * {
     padding: 0;
     margin: 0;
 }
 
 .container {
-    margin: 2rem 2rem;
     width: 80vw;
-    font-family: 'Times New Roman';
+    font-family: "Pliant", sans-serif;
+    margin: 2rem auto;
 }
 
 header {
@@ -21,28 +23,36 @@ header {
 }
 
 .heroImage {
-    max-height: 25vh;
-    max-width: 25vw;
+    max-height: 50vh;
+    max-width: 50vw;
     border-radius: 999px;
 }
 
-.container>p,
-form,.confession {
-    padding-bottom: 1rem;
-    font-size: 1rem;
+p,
+ul,
+li {
+    font-size: 1.25rem;
     text-wrap: pretty;
+    line-height: 1.5;
 }
 
-.confession {
-    border-top: 1px slategray solid;
-    border-bottom: 1px slategray solid;
+p, ul {
+    padding-bottom: 1rem;
+}
+
+ul {
+    margin-left: 2rem;
+}
+
+li {
+    margin-bottom: 0.5rem;
 }
 
 h1,
 h2 {
     display: inline-block;
     font-size: inherit;
-    font-weight: normal;
+    font-weight: 500;
 }
 
 input {
@@ -53,4 +63,26 @@ input {
 
 input {
     cursor: default;
+}
+
+@media screen and (width >=1000px) {
+
+    /** image */
+    .heroImage {
+        max-height: 25vh;
+        max-width: 25vw;
+    }
+
+    /** typography */
+    p,
+    ul,
+    li {
+        font-size: 1.5rem;
+    }
+
+    /** space beneath paragraph */
+    p, ul {
+        padding-bottom: 1.5rem;
+    }
+
 }

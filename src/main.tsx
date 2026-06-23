@@ -5,8 +5,8 @@ import App from "./App.tsx";
 createRoot(document.getElementById("root")!).render(
   <StrictMode>
     <head>
-      <title>Joe Vaughan Is Embracing The Future</title>
+      <title>Joe Vaughan</title>
     </head>
     <App />
-  </StrictMode>
+  </StrictMode>,
 );
