@@ -5,6 +5,7 @@ import Hero from "./Hero";
 import Header from "./Header";
 import "./index.css";
 
+/** Thank you for checking out the source code I hope you have a lovely day */
 function App() {
   return (
     <div className="bg-amber-100 w-screen min-h-screen">
