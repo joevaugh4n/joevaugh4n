@@ -1,12 +1,19 @@
+/* 1. ALL IMPORTS MUST BE AT THE TOP */
 @import url('https://fonts.googleapis.com/css2?family=Hanken+Grotesk:ital,wght@0,100..900;1,100..900&family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&display=swap');
 @import "tailwindcss";
 @plugin "@tailwindcss/typography";
 
+/* 2. CONFIGURATION DIRECTIVES */
+@source "../pages/**/*.{ts,tsx,js,jsx}";
+@source "../layouts/**/*.{ts,tsx,js,jsx}";
+
+/* 3. THEME DEFINITIONS */
 @theme {
     --font-serif: "Newsreader", serif;
     --font-sans: "Hanken Grotesk", sans;
 }
 
+/* 4. UTILITIES AND CUSTOM CLASSES */
 @utility custom-prose {
     @apply prose text-black;
 
@@ -15,7 +22,6 @@
     }
 
     & a {
-        @apply text-blue-600 no-underline font-medium hover:underline
+        @apply text-blue-600 no-underline font-medium hover:underline;
     }
-
 }
