@@ -1,4 +1,5 @@
 interface HeroProps {
+  /** The image you're using. */
   image: string;
 }
 

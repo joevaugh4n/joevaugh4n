@@ -1,6 +1,21 @@
-@import url('https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Hanken+Grotesk:ital,wght@0,100..900;1,100..900&family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&display=swap');
 @import "tailwindcss";
+@plugin "@tailwindcss/typography";
 
 @theme {
     --font-serif: "Newsreader", serif;
+    --font-sans: "Hanken Grotesk", sans;
+}
+
+@utility custom-prose {
+    @apply prose text-black;
+
+    & p {
+        @apply leading-relaxed;
+    }
+
+    & a {
+        @apply text-blue-600 no-underline font-medium hover:underline
+    }
+
 }
